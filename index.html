@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <title>Weather Network</title>
+</head>
+<body>
+<div class="container" id="topLevel">
+    <h1 class="mt-5 mb-5 text-center">Find Forecast!</h1>
+    <main class="mt-5" id="heading">
+        <form id="get-forecast" class="mb-5">
+            <div class="form-group">
+                <label for="userInput">Enter your City Name</label>
+                <input type="text" id="userInput" class="form-control">
+                <button type="submit" class="btn btn-primary mt-3">Get Forecast</button>
+            </div>
+        </form>
+
+        <div id="placeHolder">
+            <div class="container d-flex justify-content-center" id="foreCast">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="" id="image" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title" id="cityName"></h5>
+                            <p class="card-text" id="weatherTitle"></p>
+                            <p class="card-text" id="description"></p>
+                            <p class="card-text" id="temp"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
