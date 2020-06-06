@@ -59,7 +59,7 @@ document.querySelector("#get-forecast").addEventListener("submit", (el) => {
         response.weather[0].description,
         icon
       );
-    } else if (this.status == 400) {
+    } else if (this.status == 400 || this.status == 404) {
       UI.message();
     }
   };
@@ -70,19 +70,3 @@ document.querySelector("#get-forecast").addEventListener("submit", (el) => {
 
   xhr.send();
 });
-
-// xhr.onload skips from 1 to 4 and only works if the response is ready
-// while onreadystatechange goes through all requests from 1 to 4
-
-// xhr.onreadystatechange = function(){
-//     if(this.readyState == 4 && this.status == 200) {
-//         console.log(this.responseText);
-//     }
-// }
-
-// readyState Values
-// 0: request not initialized
-// 1: server connection established
-// 2: request received
-// 3: provessing request
-// 4: request finished and repsone is ready
