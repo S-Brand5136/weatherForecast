@@ -15,17 +15,19 @@ class UI {
     weatherTitle.innerText = title;
     description.innerText = weatherDescrip;
     img.src = icon;
-    }
+  }
 
-    static message(){
-        const div = document.createElement("div");
-        div.className = "alert alert-danger";
-        div.appendChild(document.createTextNode("City Not Found, Re-Enter City Name"));
-        const container = document.querySelector("#topLevel");
-        const heading = document.querySelector("#heading");
-        container.insertBefore(div, heading);
-        setTimeout(() => document.querySelector(".alert").remove(), 3000);
-    }
+  static message() {
+    const div = document.createElement("div");
+    div.className = "alert alert-danger";
+    div.appendChild(
+      document.createTextNode("City Not Found, Re-Enter City Name")
+    );
+    const container = document.querySelector("#topLevel");
+    const heading = document.querySelector("#heading");
+    container.insertBefore(div, heading);
+    setTimeout(() => document.querySelector(".alert").remove(), 3000);
+  }
 }
 
 // WebApi Request
@@ -69,4 +71,6 @@ document.querySelector("#get-forecast").addEventListener("submit", (el) => {
   };
 
   xhr.send();
+
+  document.querySelector("#userInput").value = "";
 });
