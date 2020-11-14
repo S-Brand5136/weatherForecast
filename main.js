@@ -36,7 +36,9 @@ document.querySelector("#get-forecast").addEventListener("submit", (el) => {
   el.preventDefault();
 
   const cityName = document.querySelector("#userInput").value;
-  const apikey = "115bb30b903e05477ef8b5a756121e3e";
+
+  // INSERT API KEY
+  const apikey = "YOUR KEY HERE";
 
   // Create XHR project
   const xhr = new XMLHttpRequest();
